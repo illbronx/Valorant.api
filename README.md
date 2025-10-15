@@ -1,3 +1,3 @@
 # Valorant.api
 
-Proyecto creado para cumplir la **Evaluación Proyecto Web API** usando `valorant-api.com`.
+Proyecto creado para **Evaluación Proyecto Web API** usando `valorant-api.com`.
