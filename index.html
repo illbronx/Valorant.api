@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valorant — Agents Explorer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <h1 class="h3 mb-0">Valorant Agents Explorer</h1>
+      <p class="mb-0 small opacity-75">Proyecto de evaluación(usa <code>valorant-api.com</code>)</p>
+    </div>
+  </header>
+
+  <main class="container my-4" id="main-content">
+    <section aria-labelledby="controls-heading" class="mb-4">
+      <h2 id="controls-heading" class="h5">Buscar y filtrar</h2>
+      <div class="row g-2 align-items-center">
+        <div class="col-md-6">
+          <label for="searchInput" class="form-label visually-hidden">Buscar agente</label>
+          <input id="searchInput" class="form-control" placeholder="Buscar por nombre (ej. jett)" />
+        </div>
+        <div class="col-md-4">
+          <label for="roleSelect" class="form-label visually-hidden">Filtrar por rol</label>
+          <select id="roleSelect" class="form-select">
+            <option value="all">Todos los roles</option>
+            <option value="Duelist">Duelist</option>
+            <option value="Controller">Controller</option>
+            <option value="Initiator">Initiator</option>
+            <option value="Sentinel">Sentinel</option>
+          </select>
+        </div>
+        <div class="col-md-2 d-grid">
+          <button id="resetBtn" class="btn btn-outline-secondary">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading" class="h5 visually-hidden">Resultados</h2>
+      <div id="status" class="mb-3" role="status" aria-live="polite"></div>
+      <div id="agentsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+    </section>
+  </main>
+
+  <footer class="bg-light py-3 mt-4">
+    <div class="container small text-muted">
+      <p class="mb-0">Datos obtenidos desde <a href="https://valorant-api.com" target="_blank"
+          rel="noopener noreferrer">valorant-api.com</a>.Jose.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
